@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/menuProfile"
+        android:icon="@drawable/ic_image"
+        android:title="Профиль"/>
+    <item android:id="@+id/menuCatalogue"
+        android:icon="@drawable/ic_image"
+        android:title="Каталог"/>
+    <item android:id="@+id/menuService"
+        android:icon="@drawable/ic_image"
+        android:title="Услуги"/>
+    <item android:id="@+id/menuContact"
+        android:icon="@drawable/ic_image"
+        android:title="Обратная связь"/>
+    <item android:id="@+id/menuSettings"
+        android:icon="@drawable/ic_image"
+        android:title="Настройки"/>
+    <item android:id="@+id/menuAbout"
+        android:icon="@drawable/ic_image"
+        android:title="О приложении"/>
+
+</menu>
