@@ -16,11 +16,6 @@
         android:label="fragment_about"
         tools:layout="@layout/fragment_about" />
     <fragment
-        android:id="@+id/menuCatalogue"
-        android:name="com.example.aaaaa123.catalogueFragment"
-        android:label="fragment_catalogue"
-        tools:layout="@layout/fragment_catalogue" />
-    <fragment
         android:id="@+id/menuContact"
         android:name="com.example.aaaaa123.contactFragment"
         android:label="fragment_contact"
@@ -35,4 +30,10 @@
         android:name="com.example.aaaaa123.settingsFragment"
         android:label="fragment_settings"
         tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/menuCatalogue"
+        android:name="com.example.aaaaa123.CatalogueFragment"
+        android:label="fragment_catalogue"
+        tools:layout="@layout/fragment_catalogue" />
+
 </navigation>
