@@ -7,3 +7,12 @@ plugins {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+import org.gradle.api.logging.configuration.ShowStacktrace
+allprojects {
+    // Same as passing --stacktrace option.
+    gradle.startParameter.showStacktrace = ShowStacktrace.ALWAYS
+
+    tasks.withType(JavaCompile) {
+        options.compilerArgs << "-Xlint:unchecked" << "-Xlint:deprecation"
+    }
+}

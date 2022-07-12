@@ -8,24 +8,27 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class GridCon extends BaseAdapter
 {
 
     private Context context;
-    private String[] itemsNames;
+    private List<Post> imagesResponseList;
     LayoutInflater inflater;
-    int[] image;
 
-    public GridCon(Context context, String[] itemsNames, int[] image) {
+    public GridCon( List<Post> imagesResponseList, Context context) {
         this.context = context;
-        this.itemsNames = itemsNames;
-        this.image = image;
+        this.imagesResponseList = imagesResponseList;
         inflater = (LayoutInflater) this.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return itemsNames.length;
+        return imagesResponseList.size();
     }
 
     @Override
@@ -50,8 +53,11 @@ public class GridCon extends BaseAdapter
         ImageView imageView = convertView.findViewById(R.id.grid_image);
         TextView textView = convertView.findViewById(R.id.grid_text);
 
-        imageView.setImageResource(image[position]);
-        textView.setText(itemsNames[position]);
+        textView.setText(imagesResponseList.get(position).getName());
+
+        Glide.with(context)
+                .load(imagesResponseList.get(position).getUrl())
+                .into(imageView);
 
         return convertView;
     }

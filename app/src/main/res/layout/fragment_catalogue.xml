@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CatalogueFragment">
+    tools:context=".fragments.CatalogueFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
@@ -13,5 +13,13 @@
         android:layout_height="match_parent"
         android:id="@+id/gridView_ct1"
         android:numColumns="2"/>
+
+    <TextView
+        android:id="@+id/error_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_gravity="center"
+        android:textSize="20sp"/>
 
 </FrameLayout>
